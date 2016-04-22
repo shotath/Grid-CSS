@@ -1,4 +1,5 @@
 $vp_names: xs sm md lg
+$bases: 24 12 5
 
 // Base
 
@@ -11,108 +12,109 @@ $vp_names: xs sm md lg
 
 // xs
 
-@for $i from 1 through 24
-    .item.xs-#{$i}-24
-        float: left
+@each $base in $bases
+    @for $i from 1 through $base
+        .item.xs-#{$i}-#{$base}
+            float: left
 
-@for $i from 1 through 24
-    .item.xs-#{$i}-24
-        width: percentage($i / 24)
+    @for $i from 1 through $base
+        .item.xs-#{$i}-#{$base}
+            width: percentage($i / $base)
 
-.item.xs-push-0
-    left: auto
-@for $i from 1 through 24
-    .item.xs-push-#{$i}-24
-        left: percentage($i / 24)
+    .item.xs-push-0
+        left: auto
+    @for $i from 1 through $base
+        .item.xs-push-#{$i}-#{$base}
+            left: percentage($i / $base)
 
-.item.xs-pull-0
-    right: auto
-@for $i from 1 through 24
-    .item.xs-push-#{$i}-24
-        right: percentage($i / 24)
+    .item.xs-pull-0
+        right: auto
+    @for $i from 1 through $base
+        .item.xs-push-#{$i}-#{$base}
+            right: percentage($i / $base)
 
-@for $i from 0 through 24
-    .item.xs-offset-#{$i}-24
-        margin-left: percentage($i / 24)
+    @for $i from 0 through $base
+        .item.xs-offset-#{$i}-#{$base}
+            margin-left: percentage($i / $base)
 
 // sm
+@each $base in $bases
+    @media (min-width: 768px)
+        @for $i from 1 through $base
+            .item.sm-#{$i}-#{$base}
+                float: left
 
-@media (min-width: 768px)
-    @for $i from 1 through 24
-        .item.sm-#{$i}-24
-            float: left
+        @for $i from 1 through $base
+            .item.sm-#{$i}-#{$base}
+                width: percentage($i / $base)
 
-    @for $i from 1 through 24
-        .item.sm-#{$i}-24
-            width: percentage($i / 24)
+        .item.sm-push-0
+            left: auto
+        @for $i from 1 through $base
+            .item.sm-push-#{$i}-#{$base}
+                left: percentage($i / $base)
 
-    .item.sm-push-0
-        left: auto
-    @for $i from 1 through 24
-        .item.sm-push-#{$i}-24
-            left: percentage($i / 24)
+        .item.sm-pull-0
+            right: auto
+        @for $i from 1 through $base
+            .item.sm-push-#{$i}-#{$base}
+                right: percentage($i / $base)
 
-    .item.sm-pull-0
-        right: auto
-    @for $i from 1 through 24
-        .item.sm-push-#{$i}-24
-            right: percentage($i / 24)
-
-    @for $i from 0 through 24
-        .item.sm-offset-#{$i}-24
-            margin-left: percentage($i / 24)
+        @for $i from 0 through $base
+            .item.sm-offset-#{$i}-#{$base}
+                margin-left: percentage($i / $base)
 
 // md
+@each $base in $bases
+    @media (min-width: 992px)
+        @for $i from 1 through $base
+            .item.md-#{$i}-#{$base}
+                float: left
 
-@media (min-width: 992px)
-    @for $i from 1 through 24
-        .item.md-#{$i}-24
-            float: left
+        @for $i from 1 through $base
+            .item.md-#{$i}-#{$base}
+                width: percentage($i / $base)
 
-    @for $i from 1 through 24
-        .item.md-#{$i}-24
-            width: percentage($i / 24)
+        .item.md-push-0
+            left: auto
+        @for $i from 1 through $base
+            .item.md-push-#{$i}-#{$base}
+                left: percentage($i / $base)
 
-    .item.md-push-0
-        left: auto
-    @for $i from 1 through 24
-        .item.md-push-#{$i}-24
-            left: percentage($i / 24)
+        .item.md-pull-0
+            right: auto
+        @for $i from 1 through $base
+            .item.md-push-#{$i}-#{$base}
+                right: percentage($i / $base)
 
-    .item.md-pull-0
-        right: auto
-    @for $i from 1 through 24
-        .item.md-push-#{$i}-24
-            right: percentage($i / 24)
-
-    @for $i from 0 through 24
-        .item.md-offset-#{$i}-24
-            margin-left: percentage($i / 24)
+        @for $i from 0 through $base
+            .item.md-offset-#{$i}-#{$base}
+                margin-left: percentage($i / $base)
 
 
 // lg
+@each $base in $bases
+    @media (min-width: 1200px)
+        @for $i from 1 through $base
+            .item.lg-#{$i}-#{$base}
+                float: left
 
-@media (min-width: 1200px)
-    @for $i from 1 through 24
-        .item.lg-#{$i}-24
-            float: left
+        @for $i from 1 through $base
+            .item.lg-#{$i}-#{$base}
+                width: percentage($i / $base)
 
-    @for $i from 1 through 24
-        .item.lg-#{$i}-24
-            width: percentage($i / 24)
+        .item.lg-push-0
+            left: auto
+        @for $i from 1 through $base
+            .item.lg-push-#{$i}-#{$base}
+                left: percentage($i / $base)
 
-    .item.lg-push-0
-        left: auto
-    @for $i from 1 through 24
-        .item.lg-push-#{$i}-24
-            left: percentage($i / 24)
+        .item.lg-pull-0
+            right: auto
+        @for $i from 1 through $base
+            .item.lg-push-#{$i}-#{$base}
+                right: percentage($i / $base)
 
-    .item.lg-pull-0
-        right: auto
-    @for $i from 1 through 24
-        .item.lg-push-#{$i}-24
-            right: percentage($i / 24)
-
-    @for $i from 0 through 24
-        .item.lg-offset-#{$i}-24
-            margin-left: percentage($i / 24)
+        @for $i from 0 through $base
+            .item.lg-offset-#{$i}-#{$base}
+                margin-left: percentage($i / $base)
