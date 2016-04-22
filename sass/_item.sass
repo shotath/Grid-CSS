@@ -2,90 +2,91 @@ $vp_names: xs sm md lg
 
 // Base
 
-@each $name in $vp_names
-    @for $i from 1 through 24
-        .item-#{$name}-#{$i}-24
-            position: relative
-            min-height: 1px
+.item
+    position: relative
+    min-height: 1px
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
 
 // xs
 
 @for $i from 1 through 24
-    .item-xs-#{$i}-24
+    .item.xs-#{$i}-24
         float: left
 
 @for $i from 1 through 24
-    .item-xs-#{$i}-24
+    .item.xs-#{$i}-24
         width: percentage($i / 24)
 
-.item-xs-push-0
+.item.xs-push-0
     left: auto
 @for $i from 1 through 24
-    .item-xs-push-#{$i}-24
+    .item.xs-push-#{$i}-24
         left: percentage($i / 24)
 
-.item-xs-pull-0
+.item.xs-pull-0
     right: auto
 @for $i from 1 through 24
-    .item-xs-push-#{$i}-24
+    .item.xs-push-#{$i}-24
         right: percentage($i / 24)
 
 @for $i from 0 through 24
-    .item-xs-offset-#{$i}-24
+    .item.xs-offset-#{$i}-24
         margin-left: percentage($i / 24)
 
 // sm
 
 @media (min-width: 768px)
     @for $i from 1 through 24
-        .item-sm-#{$i}-24
+        .item.sm-#{$i}-24
             float: left
 
     @for $i from 1 through 24
-        .item-sm-#{$i}-24
+        .item.sm-#{$i}-24
             width: percentage($i / 24)
 
-    .item-sm-push-0
+    .item.sm-push-0
         left: auto
     @for $i from 1 through 24
-        .item-sm-push-#{$i}-24
+        .item.sm-push-#{$i}-24
             left: percentage($i / 24)
 
-    .item-sm-pull-0
+    .item.sm-pull-0
         right: auto
     @for $i from 1 through 24
-        .item-sm-push-#{$i}-24
+        .item.sm-push-#{$i}-24
             right: percentage($i / 24)
 
     @for $i from 0 through 24
-        .item-sm-offset-#{$i}-24
+        .item.sm-offset-#{$i}-24
             margin-left: percentage($i / 24)
 
 // md
 
 @media (min-width: 992px)
     @for $i from 1 through 24
-        .item-md-#{$i}-24
+        .item.md-#{$i}-24
             float: left
 
     @for $i from 1 through 24
-        .item-md-#{$i}-24
+        .item.md-#{$i}-24
             width: percentage($i / 24)
 
-    .item-md-push-0
+    .item.md-push-0
         left: auto
     @for $i from 1 through 24
-        .item-md-push-#{$i}-24
+        .item.md-push-#{$i}-24
             left: percentage($i / 24)
 
-    .item-md-pull-0
+    .item.md-pull-0
         right: auto
     @for $i from 1 through 24
-        .item-md-push-#{$i}-24
+        .item.md-push-#{$i}-24
             right: percentage($i / 24)
 
     @for $i from 0 through 24
-        .item-md-offset-#{$i}-24
+        .item.md-offset-#{$i}-24
             margin-left: percentage($i / 24)
 
 
@@ -93,25 +94,25 @@ $vp_names: xs sm md lg
 
 @media (min-width: 1200px)
     @for $i from 1 through 24
-        .item-lg-#{$i}-24
+        .item.lg-#{$i}-24
             float: left
 
     @for $i from 1 through 24
-        .item-lg-#{$i}-24
+        .item.lg-#{$i}-24
             width: percentage($i / 24)
 
-    .item-lg-push-0
+    .item.lg-push-0
         left: auto
     @for $i from 1 through 24
-        .item-lg-push-#{$i}-24
+        .item.lg-push-#{$i}-24
             left: percentage($i / 24)
 
-    .item-lg-pull-0
+    .item.lg-pull-0
         right: auto
     @for $i from 1 through 24
-        .item-lg-push-#{$i}-24
+        .item.lg-push-#{$i}-24
             right: percentage($i / 24)
 
     @for $i from 0 through 24
-        .item-lg-offset-#{$i}-24
+        .item.lg-offset-#{$i}-24
             margin-left: percentage($i / 24)
