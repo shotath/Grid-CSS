@@ -1,7 +1,4 @@
-$vp_names: xs sm md lg
 $bases: 24 12 5
-
-// Base
 
 .grid,
 .item
@@ -13,35 +10,34 @@ $bases: 24 12 5
     position: relative
     min-height: 1px
 
-// xs
-
+// df
 @each $base in $bases
     @for $i from 1 through $base
-        .item.xs-#{$i}-#{$base}
+        .item.df-#{$i}-#{$base}
             float: left
 
     @for $i from 1 through $base
-        .item.xs-#{$i}-#{$base}
+        .item.df-#{$i}-#{$base}
             width: percentage($i / $base)
 
-    .item.xs-push-0
+    .item.df-push-0
         left: auto
     @for $i from 1 through $base
-        .item.xs-push-#{$i}-#{$base}
+        .item.df-push-#{$i}-#{$base}
             left: percentage($i / $base)
 
-    .item.xs-pull-0
+    .item.df-pull-0
         right: auto
     @for $i from 1 through $base
-        .item.xs-push-#{$i}-#{$base}
+        .item.df-push-#{$i}-#{$base}
             right: percentage($i / $base)
 
     @for $i from 0 through $base
-        .item.xs-offset-#{$i}-#{$base}
+        .item.df-offset-#{$i}-#{$base}
             margin-left: percentage($i / $base)
 
 @for $i from 1 through 30
-    .grid.xs-gutter-#{$i * 2}
+    .grid.df-gutter-#{$i * 2}
         margin-right: #{-1 * $i}px
         margin-left: #{-1 * $i}px
 
@@ -49,9 +45,9 @@ $bases: 24 12 5
             padding-right: #{$i}px
             padding-left: #{$i}px
 
-// sm
 
-@media (min-width: 768px)
+// sm
+@media (min-width: 568px)
     @each $base in $bases
         @for $i from 1 through $base
             .item.sm-#{$i}-#{$base}
@@ -86,8 +82,9 @@ $bases: 24 12 5
                 padding-right: #{$i}px
                 padding-left: #{$i}px
 
+
 // md
-@media (min-width: 992px)
+@media (min-width: 768px)
     @each $base in $bases
         @for $i from 1 through $base
             .item.md-#{$i}-#{$base}
@@ -124,7 +121,7 @@ $bases: 24 12 5
 
 
 // lg
-@media (min-width: 1200px)
+@media (min-width: 1024px)
     @each $base in $bases
         @for $i from 1 through $base
             .item.lg-#{$i}-#{$base}
@@ -152,6 +149,43 @@ $bases: 24 12 5
 
     @for $i from 1 through 30
         .grid.lg-gutter-#{$i * 2}
+            margin-right: #{-1 * $i}px
+            margin-left: #{-1 * $i}px
+
+            > .item
+                padding-right: #{$i}px
+                padding-left: #{$i}px
+
+
+// xl
+@media (min-width: 1280px)
+    @each $base in $bases
+        @for $i from 1 through $base
+            .item.xl-#{$i}-#{$base}
+                float: left
+
+        @for $i from 1 through $base
+            .item.xl-#{$i}-#{$base}
+                width: percentage($i / $base)
+
+        .item.xl-push-0
+            left: auto
+        @for $i from 1 through $base
+            .item.xl-push-#{$i}-#{$base}
+                left: percentage($i / $base)
+
+        .item.xl-pull-0
+            right: auto
+        @for $i from 1 through $base
+            .item.xl-push-#{$i}-#{$base}
+                right: percentage($i / $base)
+
+        @for $i from 0 through $base
+            .item.xl-offset-#{$i}-#{$base}
+                margin-left: percentage($i / $base)
+
+    @for $i from 1 through 30
+        .grid.xl-gutter-#{$i * 2}
             margin-right: #{-1 * $i}px
             margin-left: #{-1 * $i}px
 
